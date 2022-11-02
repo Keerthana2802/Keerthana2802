@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+struct stu_address
+{
+    int street;
+    char * city;
+    char * state;
+    char * country;
+};
+struct stu_data
+{
+    char * stu_name;
+    int stu_id;
+    int stu_age;
+    struct stu_address stuaddress;
+};
+
+int main()
+{
+    struct stu_data mydata;
+    mydata.stu_name="Keerthana Ravi";
+    mydata.stu_id=374;
+    mydata.stu_age=19;
+    mydata.stuaddress.street=42;
+    mydata.stuaddress.city="Chennai";
+    mydata.stuaddress.state="TamilNadu";
+    mydata.stuaddress.country="India";
+    printf("***PRINTING STUDENT DATA***);
+    printf("student name is %s\n",mydata.stu_name);
+    printf("student id is %d\n",mydata.stu_id);
+    printf("student age is %d\n",mydata.stu_age);
+    printf("student street is %d\n",mydata.stuaddress.street);
+    printf("student city is %s\n",mydata.stuaddress.city);
+    printf("student state is %s\n",mydata.stuaddress.state);
+    printf("student country is %s\n",mydata.stuaddress.country);
+    return 0;
+}
