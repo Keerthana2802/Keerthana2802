@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+struct stu_data
+{
+    char *stu_name;
+    int stu_id;
+    int stu_age;
+
+};
+int main()
+{
+
+struct stu_data student;
+
+student.stu_name="Keerthana";
+student.stu_id=374;
+student.stu_age=19;
+
+printf("student name is:%s\n",student.stu_name);
+printf("student id is:%d\n",student.stu_id);
+printf("student age is:%d\n",student.stu_age);
+
+return 0;
+}
