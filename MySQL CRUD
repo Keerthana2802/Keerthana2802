@@ -1,0 +1,31 @@
+CREATE TABLE customers (
+  id INT NOT NULL AUTO_INCREMENT,
+  Person_Name VARCHAR(255) NOT NULL,
+  Age INTEGER NOT NULL,
+  Gender VARCHAR(255) NOT NULL,
+  Local_Address VARCHAR(255) NOT NULL,
+  Phone_number VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO customers (Person_Name, Age, Gender, Local_Address, Phone_number)
+VALUES ('John Doe', 35, 'Male', '123 Main St', '555-555-5555'),
+       ('Jane Smith', 28, 'Female', '456 Park Ave', '555-555-5556'),
+       ('Bob Johnson', 42, 'Male', '789 Elm St', '555-555-5557'),
+       ('Sam Williams', 31, 'Female', '321 Oak St', '555-555-5558'),
+       ('Michael Brown', 25, 'Male', '159 Pine St', '555-555-5559'),
+       ('Emily Davis', 22, 'Female', '753 Cedar St', '555-555-5560'),
+       ('Joshua Garcia', 32, 'Male', '987 Birch St', '555-555-5561'),
+       ('Ashley Martinez', 24, 'Female', '654 Spruce St', '555-555-5562'),
+       ('David Anderson', 40, 'Male', '135 Maple St', '555-555-5563'),
+       ('Stephie Thomas', 27, 'Female','246 Willow St', '555-555-5564');
+
+
+UPDATE customers
+SET Age = 30
+WHERE Person_Name = 'John Doe';
+
+DELETE FROM customers
+WHERE Person_Name = 'Joshua Garcia';
+
+SELECT * FROM customers;
